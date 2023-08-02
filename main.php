@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Calculadora PHP</title>
+    <title>Calculadora hecha con PHP</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-/* hola esto es una rama */
+
 <body>
     <h2>Calculadora PHP</h2>
-     <form method="post" action="">
+    <form id="calculatorForm">
         <label for="num1">Número 1:</label>
-        <input type="number" name="num1" id="num1" required>
+        <input type="text" pattern="[0-9]+" name="num1" id="num1" required>
         <br>
         <label for="num2">Número 2:</label>
-        <input type="number" name="num2" id="num2" required>
+        <input type="text" pattern="[0-9]+" name="num2" id="num2" required>
         <br>
         <label for="operation">Operación:</label>
         <select name="operation" id="operation">
@@ -25,38 +25,44 @@
         <input type="submit" name="calculate" value="Calcular">
     </form>
 
-    <?php
-    if (isset($_POST['calculate'])) {
-        $num1 = $_POST['num1'];
-        $num2 = $_POST['num2'];
-        $operation = $_POST['operation'];
-        $result = 0;
+    <p id="result"></p>
 
-        switch ($operation) {
-            case 'sum':
-                $result = $num1 + $num2;
-                break;
-            case 'sub':
-                $result = $num1 - $num2;
-                break;
-            case 'mul':
-                $result = $num1 * $num2;
-                break;
-            case 'div':
-                if ($num2 != 0) {
-                    $result = $num1 / $num2;
-                } else {
-                    echo "<p style='color: red;'>Error: No es posible dividir por cero.</p>";
-                }
-                break;
-            default:
-                echo "<p style='color: red;'>Error: Operación no válida.</p>";
-                break;
-        }
+    <script>
+        const form = document.querySelector("#calculatorForm");
+        const resultParagraph = document.querySelector("#result");
 
-        echo "<p>Resultado: $result</p>";
-    }
-    ?>
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const num1 = parseInt(document.querySelector("#num1").value);
+            const num2 = parseInt(document.querySelector("#num2").value);
+            const operation = document.querySelector("#operation").value;
+            let result = 0;
 
+            switch (operation) {
+                case "sum":
+                    result = num1 + num2;
+                    break;
+                case "sub":
+                    result = num1 - num2;
+                    break;
+                case "mul":
+                    result = num1 * num2;
+                    break;
+                case "div":
+                    if (num2 !== 0) {
+                        result = num1 / num2;
+                    } else {
+                        result = "Error: No es posible dividir por cero.";
+                    }
+                    break;
+                default:
+                    result = "Error: Operación no válida.";
+                    break;
+            }
+
+            resultParagraph.textContent = `Resultado: ${result}`;
+        });
+    </script>
 </body>
 </html>
+
