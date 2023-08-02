@@ -1,0 +1,74 @@
+/*body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;  
+}*/
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: url('github-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+/* Resto del código CSS (el mismo que proporcioné en la respuesta anterior) */
+
+
+h2 {
+    margin-top: 30px;
+}
+
+form {
+    margin-top: 20px;
+    display: inline-block;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="number"] {
+    width: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+p {
+    margin-top: 20px;
+}
+
+p.error-message {
+    color: red;
+}
+
+p.result {
+    font-size: 20px;
+    color: #333;
+}
