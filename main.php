@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Calculadora hecha con PHP</title>
+    <title>Calculadora PHP</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-
 <body>
     <h2>Calculadora PHP</h2>
     <form id="calculatorForm">
@@ -24,8 +23,7 @@
         <br>
         <input type="submit" name="calculate" value="Calcular">
     </form>
-
-    <p id="result"></p>
+    <p id="result" class="result"></p>
 
     <script>
         const form = document.querySelector("#calculatorForm");
