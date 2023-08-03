@@ -12,6 +12,8 @@ body {
     color: #007bff;
     font-weight: bold;
     margin-top: 30px;
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff;
 }
 
 form {
@@ -69,4 +71,6 @@ p.result {
     display: block; /* Ajuste para reducir el tamaño horizontal del fondo */
     max-width: 200px; /* Ajuste para reducir el tamaño horizontal del fondo */
     margin: 0 auto; /* Centrar el resultado */
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff;
 }
