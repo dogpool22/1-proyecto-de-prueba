@@ -7,13 +7,21 @@ body {
     padding: 0;
 }
 
+.container {
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    font-family: "Roboto", sans-serif;
+}
+
 .title {
     font-size: 36px;
     color: #007bff;
     font-weight: bold;
-    margin-top: 30px;
+    margin-top: 2px;
     -webkit-text-stroke: 1.3px #fff;
     text-stroke: 1.3px #fff;
+    font-family: "Roboto", sans-serif;
 }
 
 form {
@@ -23,6 +31,7 @@ form {
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     background-color: #fff;
+    font-family: "Roboto", sans-serif;
 }
 
 input[type="text"] {
@@ -31,6 +40,7 @@ input[type="text"] {
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
+    font-family: "Roboto", sans-serif;
 }
 
 select {
@@ -38,6 +48,7 @@ select {
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
+    font-family: "Roboto", sans-serif;
 }
 
 input[type="submit"] {
@@ -49,6 +60,7 @@ input[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-family: "Roboto", sans-serif;
 }
 
 input[type="submit"]:hover {
@@ -57,6 +69,7 @@ input[type="submit"]:hover {
 
 p {
     margin-top: 20px;
+    font-family: "Roboto", sans-serif;
 }
 
 p.error-message {
@@ -73,4 +86,5 @@ p.result {
     margin: 0 auto; /* Centrar el resultado */
     -webkit-text-stroke: 1.3px #fff;
     text-stroke: 1.3px #fff;
+    font-family: "Roboto", sans-serif;
 }
