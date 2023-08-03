@@ -1,33 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Calculadora PHP simple</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <h2 class="title">Calculadora PHP simple</h2>
-        <form id="calculatorForm">
-            <label for="num1">Número 1:</label>
-            <input type="text" pattern="[0-9]+" name="num1" id="num1" required>
-            <br>
-            <label for="num2">Número 2:</label>
-            <input type="text" pattern="[0-9]+" name="num2" id="num2" required>
-            <br>
-            <label for="operation">Operación:</label>
-            <select name="operation" id="operation">
-                <option value="sum">Suma</option>
-                <option value="sub">Resta</option>
-                <option value="mul">Multiplicación</option>
-                <option value="div">División</option>
-            </select>
-            <br>
-            <input type="submit" name="calculate" value="Calcular">
-        </form>
-        <p id="result" class="result"></p>
-    </div>
-
-    <script>
+<script>
         const form = document.querySelector("#calculatorForm");
         const resultParagraph = document.querySelector("#result");
 
@@ -63,7 +34,3 @@
             resultParagraph.textContent = `Resultado: ${result}`;
         });
     </script>
-</body>
-</html>
-
-
